@@ -1,10 +1,13 @@
-package pcd.sketch01;
+package pcd.concurrent.model;
 
-import java.util.*;
+import pcd.common.BoardConf;
+import pcd.common.Boundary;
+
+import java.util.List;
 
 public class Board {
 
-    private List<Ball> balls;    
+    private List<Ball> balls;
     private Ball playerBall;
     private Boundary bounds;
     
@@ -16,7 +19,7 @@ public class Board {
     	bounds = conf.getBoardBoundary();
     }
     
-    public synchronized void updateState(long dt) {
+    public void updateState(long dt) {
 
     	playerBall.updateState(dt, this);
     	

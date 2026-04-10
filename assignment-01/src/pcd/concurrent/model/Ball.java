@@ -1,4 +1,8 @@
-package pcd.sketch01;
+package pcd.concurrent.model;
+
+import pcd.common.Boundary;
+import pcd.common.P2d;
+import pcd.common.V2d;
 
 public class Ball {
     
@@ -31,7 +35,7 @@ public class Ball {
      	applyBoundaryConstraints(ctx);
     }
     
-    public synchronized void kick(V2d vel) {
+    public void kick(V2d vel) {
     	this.vel = vel;
     }
 
