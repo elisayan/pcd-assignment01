@@ -1,6 +1,8 @@
 package pcd.concurrent;
 
-import pcd.sketch01.*;
+import pcd.common.*;
+import pcd.concurrent.model.*;
+import pcd.concurrent.view.*;
 
 import java.util.Random;
 
@@ -16,9 +18,9 @@ public class Main {
 		 * - massive: 4500 small balls 
 		 */
 		
-		var boardConf = new MinimalBoardConf();
+		//var boardConf = new MinimalBoardConf();
 		// var boardConf = new LargeBoardConf();
-		// var boardConf = new MassiveBoardConf();
+		 var boardConf = new MassiveBoardConf();
 		
 		Board board = new Board();
 		board.init(boardConf);

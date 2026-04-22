@@ -35,7 +35,7 @@ public class Ball {
      	applyBoundaryConstraints(ctx);
     }
     
-    public void kick(V2d vel) {
+    public synchronized void kick(V2d vel) {
     	this.vel = vel;
     }
 

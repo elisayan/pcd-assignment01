@@ -19,7 +19,7 @@ public class Board {
     	bounds = conf.getBoardBoundary();
     }
     
-    public void updateState(long dt) {
+    public synchronized void updateState(long dt) {
 
     	playerBall.updateState(dt, this);
     	

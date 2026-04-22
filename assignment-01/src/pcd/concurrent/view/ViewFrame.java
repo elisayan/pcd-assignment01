@@ -14,7 +14,7 @@ public class ViewFrame extends JFrame {
     public ViewFrame(ViewModel model, int w, int h){
     	this.model = model;
     	this.sync = new RenderSynch();
-    	setTitle("Sketch 03");
+    	setTitle("Poool Game - multithreaded version");
         setSize(w,h + 25);
         setResizable(false);
         panel = new VisualiserPanel(w,h);
