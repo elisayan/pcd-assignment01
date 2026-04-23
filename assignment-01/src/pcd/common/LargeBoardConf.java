@@ -1,6 +1,5 @@
 package pcd.common;
 
-import pcd.common.*;
 import pcd.concurrent.model.Ball;
 
 import java.util.ArrayList;
@@ -14,6 +13,11 @@ public class LargeBoardConf implements BoardConf {
 	}
 
 	@Override
+	public Ball getBotBall() {
+		return new Ball(new pcd.common.P2d(0.5, -0.8), 0.05, 1.5, new pcd.common.V2d(0,0));
+	}
+
+	@Override
 	public List<Ball> getSmallBalls() {		
 		var ballRadius = 0.01;
         var balls = new ArrayList<Ball>();
@@ -22,7 +26,7 @@ public class LargeBoardConf implements BoardConf {
     		for (int col = 0; col < 20; col++) {
         		var px = -0.25 + col*0.025;
         		var py =  row*0.025;
-        		var b = new Ball(new P2d(px, py), ballRadius, 0.25, new V2d(0,0));
+        		var b = new Ball(new pcd.common.P2d(px, py), ballRadius, 0.25, new pcd.common.V2d(0,0));
             	balls.add(b);    			
     		}
     	}		
